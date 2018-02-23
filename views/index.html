@@ -49,9 +49,9 @@
 					<h2 class="fecha">21 de marzo 2018</h2>
 					<hr>
 					<h3 class="fecha">Costo de la entrada</h3>
-					<h3 class="no-margin">Público general:</h3>
-					<h3 class="no-margin">Estudiantes:</h3>
-					<h3 class="no-margin">Profesores:</h3>
+					<h3 class="no-margin low-xs">Público general:150.000,00</h3>
+					<h3 class="no-margin low-xs">Estudiantes:150.000,00</h3>
+					<h3 class="no-margin low-xs">Profesores:150.000,00</h3>
 					<h2 class="registro">¡Registrate y participa!</h2>
 					<br>
 					
@@ -93,7 +93,7 @@
 
 
 	<div class="container" id="patrocinio">
-		<div class="row">
+		<div class="row vh" style="">
 			<br>
 			<br>
 			<br>
@@ -101,17 +101,17 @@
 
 			<div class="col-md-6">
 
-				<h3 align="center">¿Por qué ser patrocinante?</h3>
+				<h3 align="center" style="font-family: Exo">¿Por qué ser patrocinante?</h3>
 				<p align="justify">Se considera como Patrocinador del Evento cualquier institución pública, empresa, universidad y organización académica, que con su apoyo desee establecer relaciones de colaboración con la FaCES y la Facultad de Ciencias, para crear sinergias mediante el intercambio de beneficios y relaciones ganar-ganar<p> 
 				<p align="justify">En este espacio, los patrocinadores puedan promover sus productos y/o servicios, así como la imagen de la organización, que además de consolidar una red de trabajo colaborativo como asociado estratégico de la UCV (Networking) para impulsar la Innovación Abierta, provea novedosas y disruptivas soluciones a las empresas en el mundo de la Transformación Digital y la Empresarialidad Ágil.</p>
-				<h3>El evento ayuda a:</h3>
+				<h3 align="center" style="font-family: Exo">El evento ayuda a:</h3>
 				<ul>
 					<li>Fomentar el posicionamiento y reconocimiento de una marca</li> 
 					<li>Impactar una audiencia interesada en la transferencia y la transformación digital.</li> 
 					<li>Mostrar sus soluciones, productos y servicios mediante interacciones directas. </li>
 					<li>Networking</li>
 				</ul>
-				<h3 align="center">Planes de patrocinio</h3>
+				<h3 align="center" class="fnt-roboto-slab">Planes de patrocinio</h3>
 
 				<ul class="img-patrocinio txt-cntr">
 					<li>
@@ -128,30 +128,31 @@
 					</li>
 				</ul>
 
-				<a href="../static/docs/PLANES_DE_PATROCINIO.pdf" target="_blank" > PLANES DE PATROCINIO: CONDICIONES Y BENEFICIOS</a>
+				<a href="../static/docs/PLANES_DE_PATROCINIO.pdf" target="_blank" class="fnt-roboto-slab" style="color:deepskyblue;"> PLANES DE PATROCINIO: CONDICIONES Y BENEFICIOS <i class="fa fa-eye" aria-hidden="true"> </i></a>
 			</div>
 
 			<div class="col-md-6">
-				<h4 class="fnt-roboto-slab">Formulario de patrocinio</h4>
-				<hr>
-				<form>
-				<input class="form-pat" type="text" name="nombre_p" placeholder="Nombre y apellido *" required pattern="[a-zA-Z]{3,10}[\s][a-zA-Z]{3,12}" title="Solo se permiten letras" id="nombreid" >
+				<h4 class="fnt-roboto-slab" style="font-size:40px;">Formulario de patrocinio</h4>
+				<br>
+				<form action="../registro_patrocinante.php" method="POST" id="form-reg-patrocinio">
+
+				<input class="form-pat" type="text" name="nombre_p" placeholder="Nombre y apellido *" required pattern="[a-zA-Z]{3,10}[\s][a-zA-Z]{3,12}" title="Solo se permiten letras" id="nombreid_p" >
 				<br>
 				<br>
-				<input class="form-pat" type="text" name="empresa_p" placeholder="Empresa" title="Solo se permiten letras" id="empresaid">
+				<input class="form-pat" type="text" name="empresa_p" placeholder="Empresa" title="Solo se permiten letras" id="empresaid_p">
 				<br>
 				<br>
-				<input class="form-pat" type="text" name="id_p" placeholder="Cédula de identidad/RIF *" required pattern="[1-9]{7,9}">
+				<input class="form-pat" type="text" name="id_p" placeholder="Cédula de identidad/RIF *" required >
 				<br>
 				<br>
-				<input class="form-pat" type="email" name="email_p" placeholder="Correo electrónico *" id="correoid" required>
+				<input class="form-pat" type="email" name="email_p" placeholder="Correo electrónico *" id="correoid_p" required>
 				<br>
 				<br>
 				<input class="form-pat" type="tex" name="telfc_p" placeholder="Teléfono de contacto *" required>
 				<br>
 				<br>
-				<input type="radio" name="tipo_pago">Depósito
-				<input type="radio" name="tipo_pago">Transferencia
+				<input type="radio" name="tipo_pago_p" checked value="DEP">Depósito
+				<input type="radio" name="tipo_pago_p" value="TRA">Transferencia
 				<br>
 				<br>
 				<input class="form-pat" type="text" name="id_pago_p" placeholder="N° de transferencia/N° de depóosito *">
@@ -475,31 +476,31 @@
 		<div class="col-md-6">
 
 			<form class="form" method="POST" id="myform">
-				<h1 class="fnt-white fnt-roboto-slab">Formulario de registro</h1>
+				<h1 class="fnt-white fnt-roboto-slab">Formulario de registro participante</h1>
 				<br>
-				<input class="usr-reg" type="text" name="nombre" placeholder="Nombre y apellido *" required pattern="[a-zA-Z]{3,10}[\s][a-zA-Z]{3,12}" title="Solo se permiten letras" id="nombreid" >
+				<input class="usr-reg" type="text" name="nombre" placeholder="Nombre y apellido *" required title="Solo se permiten letras" id="nombreid" pattern="[a-zA-Z]{3,}[\s][a-zA-Z]{3,}">
 				<br>
 				<br>
 				<input class="usr-reg" type="text" name="empresa" placeholder="Empresa" title="Solo se permiten letras" id="empresaid">
 				<br>
 				<br>
-				<input class="usr-reg" type="text" name="ci" placeholder="Cédula de identidad *" required pattern="[1-9]{7,9}" title="Solo son permitidos números sin puntos ej:12345678">
+				<input class="usr-reg" type="text" name="ci" placeholder="Cédula de identidad *" required  title="Solo son permitidos números sin puntos ej:12345678 " pattern="[0-9]{7,8}">
 				<br>
 				<br>
-				<input class="usr-reg" type="email" name="email" placeholder="Correo electrónico *" id="correoid" required>
+				<input class="usr-reg" type="email" name="email" placeholder="Correo electrónico *" id="correoid" required title="indique un correo electrónico válido ej:ejemplo@correo.com">
 				<br>
 				<br>
-				<input class="usr-reg" type="tex" name="telfc" placeholder="Teléfono celular *" pattern="(0412|0416|0426]|0414|0424)[0-9]{7}" required>
+				<input class="usr-reg" type="tex" name="telfc" placeholder="Teléfono celular *" required pattern="(0412|0416|0426|0414|0424)[0-9]{7}">
 				<br>
 				<br>
 				<input class="usr-reg" type="text" name="telfh" placeholder="Teléfono de habitación" >
 				<br>
 				<br>
-				<input class="" type="radio" name="tipo_pago">Depósito
-				<input class="" type="radio" name="tipo_pago">Transferencia
+				<input class="" type="radio" name="tipo_pago" required value="DEP" checked>Depósito
+				<input class="" type="radio" name="tipo_pago" value="TRA">Transferencia
 				<br>
 				<br>
-				<input class="usr-reg" type="text" name="id_pago" placeholder="N° de transferencia/N° de depóosito *">
+				<input class="usr-reg" type="text" name="id_pago" placeholder="N° de transferencia/N° de depóosito *" placeholder="[0-9]{10,}">
 				<br>
 				<br>
 				<label for="fecha_pago" class="fnt-white" style="font-size: 18px;">Fecha del depósito o transferencia *</label>
@@ -507,15 +508,21 @@
 				<br>
 				<br>
 				<p class="fnt-white">Los campos identificados con * son obligatorios</p>
-				<button class="btn btn-warning enviar" style="width: 80%;">Registrar</button>
+				<button type="submit" class="btn btn-warning enviar" style="width: 80%;">Registrar</button>
 			</form>
 
 		</div>
 		<br><br>
+		<p id="ej"></p>
 	</div>
 </div>
 
 <script type="text/javascript">
+
+	function clean_form(){
+
+		$(".usr-reg").val("");
+	}
 
 	$('.navbar-nav li a').click(function(){
 
@@ -537,8 +544,22 @@
 
 	});
 
-	$.post("../app.php",$("#myform").serialize(),function(object){
-		$( ".response" ).html(object);
+	$("#myform").submit(function(){
+		 event.preventDefault();
+	$.post("../registro_participante.php",$("#myform").serialize(),function(object){
+		alert(object)
+	});
+
+	clean_form();
+
+});
+
+	$("#form-reg-patrocinio").submit(function(){
+		event.preventDefault();
+		$.post("../registro_patrocinante.php",$("#form-reg-patrocinio").serialize(),function(object){
+			alert(object);
+		});
+		clean_form();
 	});
 
 

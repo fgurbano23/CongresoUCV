@@ -10,6 +10,7 @@ MORADO:rgb(115, 40, 70);
 
 
  */
+
 .fnt-white{
 	color: white;
 }
@@ -42,6 +43,18 @@ MORADO:rgb(115, 40, 70);
 
 #patrocinio,#nosotros{
 	height: 100vh;
+}
+
+.vh{
+	height: 100vh;
+}
+
+#patrocinio{
+	color: white;
+	width: 100%;
+	background:url(../img/banner2.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
 #banner{
@@ -166,17 +179,22 @@ border:none;
 
 .form{
 	margin-top: 80px;
+	color:white;
 }
 
 .form-pat{
 	width: 100%;
 	border: none;
 	background: transparent;
-	border-bottom: solid 1px black;
+	border-bottom: solid 1px white;
 }
 
 .form-pat:focus{
 outline: none;
+}
+
+.form-pat::placeholder{
+	color: white;
 }
 
 
@@ -237,5 +255,16 @@ display: inline;
 .topic-tittle{
 	font-size: 20px;
 }
+.usr-reg{
+	width:100%;
+}
+.vh{
+	height: auto;
+}
+
+.low-xs{
+font-size: 18px;
+}
+
 
 }

@@ -23,7 +23,7 @@ $username = "root";
 $password = "";
 
 
-if( $nombre=="" || $correo=="" || $cedula=="" || $telfc=="" || $fecha_pago==""){
+if( $nombre=="" || $correo=="" || $cedula=="" || $telfc=="" || $di_pago=="" || $fecha_pago=="" ){
 	echo "POR FAVOR LLENE LOS CAMPOS REQUERIDOS PARA PODER SER REGISRADO";
 	return; 
 }
@@ -44,7 +44,7 @@ if ($conn->connect_error) {
 
 if($result->num_rows > 0){
 
-	echo "ESTE USUARIO YA HA SIDO REGITRADO EN EL SISTEMA";
+	echo "ÉSTE USUARIO YA ESTÁ REGITRADO EN EL SISTEMA";
 	return;
 	
 	}
@@ -53,7 +53,7 @@ else{
 
 if ($conn->query($sql) === TRUE) {
 
-    echo "USTED HA SIDO REGISTRADO DE FORMA EXITOSA";
+    echo "USTED HA SIDO REGISTRADO DE FORMA EXITOSA EN NUESTRO SISTEMA";
 
 	}
 
