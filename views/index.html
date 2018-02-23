@@ -50,10 +50,9 @@
 					<hr>
 					<h3 class="fecha">Costo de la entrada</h3>
 					<h3 class="no-margin low-xs">Público general:150.000,00</h3>
-					<h3 class="no-margin low-xs">Estudiantes:150.000,00</h3>
-					<h3 class="no-margin low-xs">Profesores:150.000,00</h3>
+					<h3 class="no-margin low-xs">Estudiantes:75.000,00</h3>
+					<h3 class="no-margin low-xs">Profesores:50.000,00</h3>
 					<h2 class="registro">¡Registrate y participa!</h2>
-					<br>
 					
 					<!--<a class="btn btn-warning" href="#contacto">Registro de usuario </a>-->
 				</div>
@@ -84,7 +83,7 @@
 
 			<div class="hidden-xs col-sm-6 col-md-6" style="height: 100vh;">
 				<br><br><br>
-				<img src="../static/img/logo-ucv.jpg" class="center-block " width="450px;">
+				<img src="../static/img/logo-ucv.jpg" class="center-block img-res" width="450px;">
 				<h2 class="nosotros_title">Nosotros</h2>
 			</div>
 
@@ -191,11 +190,11 @@
      					<br>
      					<br>
      					<br>
-     		 			<div class="hidden-xs col-md-6" >
-     						<img src="../static/img/topico1.jpg" alt="Los Angeles">
+     		 			<div class="hidden-xs hidden-sm col-md-6" >
+     						<img src="../static/img/topico1.jpg" class="img-topic">
      					</div>
 
-     					<div class="col-md-6">
+     					<div class="col-sm-12 col-md-6">
       						<h1 class="topic-tittle fnt-roboto-slab">Investigación, Innovación y Desarrollo Abierto para la Gestión Ágil de Empresas</h1>
       						<hr>
       						<!--<h2 class="topic-subttile fnt-roboto-slab">¿La economía del futuro?</h2>-->
@@ -220,11 +219,11 @@
      					<br>
      					<br>
      					<br>
-     		 			<div class="hidden-xs col-md-6">
-     						<img src="../static/img/topico2.jpg" alt="Los Angeles">
+     		 			<div class="hidden-xs hidden-sm col-md-6">
+     						<img src="../static/img/topico2.jpg" class="img-topic">
      					</div>
      		
-     					<div class="col-md-6 fnt-roboto-slab">
+     					<div class=" col-sm-12 col-md-6 fnt-roboto-slab">
      			
       						<h1 class="topic-tittle" >Conformando Procesos Ágiles para la Alta Productividad Empresarial</h1>
       						<hr>
@@ -249,11 +248,11 @@
      					<br>
      					<br>
      					<br>
-     		 			<div class="hidden-xs col-md-6">
-     						<img src="../static/img/topico3.jpg" alt="Los Angeles">
+     		 			<div class="hidden-xs hidden-sm col-md-6">
+     						<img src="../static/img/topico3.jpg" class="img-topic">
      					</div>
      		
-     					<div class="col-md-6">
+     					<div class="col-sm-12 col-md-6">
      						
       						<h1 class="topic-tittle fnt-roboto-slab" >Desarrollando Nuevos Modelos De Negocios, Absorbiendo Las Buenas Prácticas Empresariales</h1>
       						<hr>
@@ -277,11 +276,11 @@
      					<br>
      					<br>
      					<br>
-     		 			<div class="hidden-xs col-md-6">
-     						<img src="../static/img/topico3.jpg" alt="Los Angeles">
+     		 			<div class="hidden-xs hidden-sm col-md-6">
+     						<img src="../static/img/topico3.jpg" class="img-topic">
      					</div>
      		
-     					<div class="col-md-6">
+     					<div class="col-sm-12 col-md-6">
      						
       						<h1 class="topic-tittle fnt-roboto-slab" >Creando Novedosas Estrategias De Valor, Mediante Mejores Prácticas Tecnológicas que la Competencia</h1>
       						<hr>
@@ -508,7 +507,9 @@
 				<br>
 				<br>
 				<p class="fnt-white">Los campos identificados con * son obligatorios</p>
-				<button type="submit" class="btn btn-warning enviar" style="width: 80%;">Registrar</button>
+				<button type="submit" class="btn btn-warning enviar">Registrar</button>
+        <br>
+        <br>
 			</form>
 
 		</div>
@@ -522,6 +523,7 @@
 	function clean_form(){
 
 		$(".usr-reg").val("");
+    $(".form-pat").val("");
 	}
 
 	$('.navbar-nav li a').click(function(){
@@ -538,7 +540,7 @@
 
 	});
 
-	$("#nombreid, #empresaid, #correoid").keyup(function(){
+	$("#nombreid, #empresaid, #correoid,#nombreid_p,#empresaid_p,#id_p,#email_p").keyup(function(){
 
 		$(this).val(($(this).val().toUpperCase()));
 
@@ -559,7 +561,9 @@
 		$.post("../registro_patrocinante.php",$("#form-reg-patrocinio").serialize(),function(object){
 			alert(object);
 		});
+
 		clean_form();
+
 	});
 
 

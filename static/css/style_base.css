@@ -75,7 +75,7 @@ border:none;
 
 .bg-opacity{
 	height: 100vh;
-	background:rgba(36, 59, 100,.6); /* GRIS CLARO rgba(160, 169, 174,.7);*/ /* MORADO rgba(115, 40, 70,.8)*/;
+	background:/*rgba(36, 59, 100,.8)*//*GRIS CLARO rgba(160, 169, 174,.7) *//* MORADO rgba(115, 40, 70,.8)*/rgba(74, 11, 81,.8);
 }
 
 .fecha, .registro{
@@ -171,6 +171,10 @@ border:none;
 	outline: none;
 }
 
+.enviar{
+	width: 80%;
+}
+
 .usr-reg::placeholder{
 	color:white;
 	font-weight: 400;
@@ -195,6 +199,8 @@ outline: none;
 
 .form-pat::placeholder{
 	color: white;
+	font-weight: 400;
+	font-size: 18px;
 }
 
 
@@ -229,6 +235,10 @@ outline: none;
 
 .contact{
 	height: auto;
+}
+
+.logos-img{
+	margin-top: 40px;
 }
 
 .logos-img li{
@@ -266,5 +276,53 @@ display: inline;
 font-size: 18px;
 }
 
+}
 
+@media  (min-width: 768px ) and (max-width: 1024px ){
+
+#banner,#contacto,#patrocinio,#nosotros{
+	height: auto;
+}
+
+.contact{
+	height: auto;
+}
+
+
+.logos-img{
+	display: block;
+	margin: 0;
+
+}
+
+.logos-img li{
+display: inline;
+}
+
+.vh{
+	height: auto;
+}
+
+.container-contactenos h2{
+	font-size: 5em;
+}
+.usr-reg{
+	width: 100%;
+}
+.img-topic{
+	width: 300px;
+}
+.enviar{
+	width: 100%;
+}
+.nosotros_title{
+position: absolute;
+left: 0px;
+margin-left: 0px;
+font-size: 6.5em;
+}
+.img-res{
+	margin-top:110px;
+	width: 300px;
+}
 }
