@@ -23,7 +23,7 @@ $username = "root";
 $password = "";
 
 
-if( $nombre=="" || $correo=="" || $cedula=="" || $telfc=="" || $di_pago=="" || $fecha_pago=="" ){
+if( $nombre=="" || $correo=="" || $cedula=="" || $telfc=="" || $id_pago=="" || $fecha_pago=="" ){
 	echo "POR FAVOR LLENE LOS CAMPOS REQUERIDOS PARA PODER SER REGISRADO";
 	return; 
 }
