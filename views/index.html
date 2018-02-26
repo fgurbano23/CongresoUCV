@@ -10,6 +10,8 @@
 	<script type="text/javascript" src="static/js/jquery.js"></script>
 	<script type="text/javascript" src="static/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="static/js/validadores.js"></script>
+	
+
 	<meta charset="utf-8">
 	<meta name= viewport content= width=device-width initial-scale=1>
 </head>
@@ -150,14 +152,14 @@
 				<input class="form-pat" type="email" name="email_p" placeholder="Correo electrónico *" id="correoid_p" required title="Ingrese un correo electrónico válido">
 				<br>
 				<br>
-				<input class="form-pat" type="tex" name="telfc_p" placeholder="Teléfono de contacto *" required onkeypress="return soloNumeros(event)">
+				<input class="form-pat" type="tex" name="telfc_p" placeholder="Teléfono de contacto *" required onkeypress="return soloNumeros(e)">
 				<br>
 				<br>
 				<input type="radio" name="tipo_pago_p" checked value="DEP">Depósito
 				<input type="radio" name="tipo_pago_p" value="TRA">Transferencia
 				<br>
 				<br>
-				<input class="form-pat" type="text" name="id_pago_p" placeholder="N° de transferencia/N° de depóosito *" pattern="[0-9]{8,14}" onkeypress="return soloNumeros(event)">
+				<input class="form-pat" type="text" name="id_pago_p" placeholder="N° de transferencia/N° de depóosito *" pattern="[0-9]{8,14}">
 				<br>
 				<br>
 				<label for="fecha_pago_p" style="font-size: 18px;">Fecha del depósito o transferencia *</label>
@@ -502,23 +504,23 @@
 				<input class="usr-reg" type="text" name="empresa" placeholder="Empresa" id="empresaid">
 				<br>
 				<br>
-				<input class="usr-reg" type="text" name="ci" placeholder="Cédula de identidad *" required  title="Solo son permitidos números sin puntos ej:12345678 " pattern="[0-9]{7,8}" onkeypress="return soloNumeros(event)">
+				<input class="usr-reg" type="text" name="ci" placeholder="Cédula de identidad *" required  title="Solo son permitidos números sin puntos ej:12345678 " pattern="[0-9]{7,8}">
 				<br>
 				<br>
 				<input class="usr-reg" type="email" name="email" placeholder="Correo electrónico *" id="correoid" required title="indique un correo electrónico válido ej:ejemplo@correo.com">
 				<br>
 				<br>
-				<input class="usr-reg" type="tex" name="telfc" placeholder="Teléfono celular *" required pattern="(0412|0416|0426|0414|0424)[0-9]{7}" onkeypress="return soloNumeros(event)">
+				<input class="usr-reg" type="tex" name="telfc" placeholder="Teléfono celular *" required pattern="(0412|0416|0426|0414|0424)[0-9]{7}">
 				<br>
 				<br>
-				<input class="usr-reg" type="text" name="telfh" placeholder="Teléfono de habitación" onkeypress="return soloNumeros(event)" >
+				<input class="usr-reg" type="text" name="telfh" placeholder="Teléfono de habitación" >
 				<br>
 				<br>
 				<input class="" type="radio" name="tipo_pago" required value="DEP" checked>Depósito
 				<input class="" type="radio" name="tipo_pago" value="TRA">Transferencia
 				<br>
 				<br>
-				<input class="usr-reg" type="text" name="id_pago" placeholder="N° de transferencia/N° de depóosito *" pattern="[0-9]{8,14}" onkeypress="return soloNumeros(event)">
+				<input class="usr-reg" type="text" name="id_pago" placeholder="N° de transferencia/N° de depóosito *" pattern="[0-9]{8,14}">
 				<br>
 				<br>
 				<label for="fecha_pago" class="fnt-white" style="font-size: 18px;">Fecha del depósito o transferencia *</label>
