@@ -11,6 +11,11 @@ MORADO:rgb(115, 40, 70);
 
  */
 
+.txt-j{
+	
+	text-align: justify;
+}
+
 .fnt-white{
 	color: white;
 }
@@ -41,7 +46,7 @@ MORADO:rgb(115, 40, 70);
 	width: 100%;
 }
 
-#patrocinio,#nosotros{
+#patrocinio,#nosotros,#ponente{
 	height: 100vh;
 }
 
